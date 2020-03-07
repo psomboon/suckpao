@@ -1,0 +1,69 @@
+<app-menu-admin>
+  <div align="center">
+    <mat-card class="card" style="width:90%">
+      <br />
+      <br />
+      <h2>รายชื่อ Laundry</h2>
+      <table class="table">
+        <tr>
+          <td>ชื่อร้าน</td>
+          <td>ชื่อ</td>
+          <td>นามสกุล</td>
+          <td>เบอร์โทรศัพท์</td>
+          <td>อีเมลล์</td>
+          <td>รหัสผ่าน</td>
+          <td>รายละเอียด & แก้ไข</td>
+          <td>ลบ</td>
+        </tr>
+        <tr *ngFor="let item of itemArray">
+          <td>{{ item.namestore }}</td>
+          <td>{{ item.fname }}</td>
+          <td>{{ item.lname }}</td>
+          <td>{{ item.phone }}</td>
+          <td>{{ item.emails }}</td>
+          <td>{{ item.password }}</td>
+
+          <td>
+            <button
+              mat-raised-button
+              color="warn"
+              (click)="
+                openDialog(
+                  item.$key,
+                  item.fname,
+                  item.lname,
+                  item.personid,
+                  item.birthday,
+                  item.phone,
+                  item.address,
+                  item.email,
+                  item.emails,
+                  item.password,
+                  item.namestore,
+                  item.about,
+                  item.time,
+                  item.addressstore,
+                  item.longitudess,
+                  item.latitudess,
+                  item.profilePicture,
+                  item.storePicture
+                )
+              "
+            >
+              รายละเอียด & แก้ไข
+            </button>
+          </td>
+          <td>
+            <button
+              mat-raised-button
+              color="warn"
+              (click)="onDelete(item.$key)"
+            >
+              ลบ
+            </button>
+          </td>
+        </tr>
+      </table>
+    </mat-card>
+  </div>
+</app-menu-admin>

@@ -1,0 +1,29 @@
+<app-home-content
+  ><div class="container-fluid">
+    <br />
+    <table style="width:70%" border="1" class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th>uid</th>
+          <th>กี่ชิ้น</th>
+          <th>รีด | ไม่รีด</th>
+          <th>ราคา</th>
+          <th>สถานะ</th>
+          <th>ชื่อลูกค้า</th>
+          <th>ที่อยู่</th>
+          <!-- <th>กด</th> -->
+        </tr>
+      </thead>
+      <tr *ngFor="let item of order">
+        <td>{{ item.orderid }}</td>
+        <td>{{ item.num }}</td>
+        <td>{{ item.laundry }}</td>
+        <td>{{ item.price }}</td>
+        <td>{{ item.status }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.address }}</td>
+        <!-- <td>{{ data[5] }}</td> -->
+      </tr>
+    </table>
+  </div>
+</app-home-content>

@@ -1,0 +1,74 @@
+/* .nav-links{
+  font-size: 25px;
+  font-weight:bold;
+}
+.bg-whites{
+  background-color: #CDCD00;
+}
+.admin{
+  background-color: rgb(59, 30, 0);
+}
+.fontcolor{
+  color:white;
+}
+.bord{
+  background-color: #FFA500;
+} */
+
+
+.nav-links{
+  font-size: 25px;
+  font-weight:bold;
+}
+.bg-whites{
+  background-color: #CDCD00;
+}
+.admin{
+  /* min-height: 100vh; */
+ /*  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox; */
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; */
+
+   padding: 15px;
+  background: rgb(7, 31, 56);  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, rgba(122, 39, 0, 0.904), rgba(255, 84, 17, 0.849), rgba(255, 111, 68, 0.884)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* (to right, rgb(255, 107, 22), rgb(82, 27, 3), rgb(37, 11, 0));  */
+
+  /* (to right, rgb(37, 11, 0), rgb(82, 27, 3), rgb(255, 107, 22));  */
+
+
+
+}
+
+.fontcolor{
+  color:white;
+}
+.bord{
+  background-color: #D50000;
+
+}
+
+.nav-item{
+  color:rgb(247, 247, 247);
+
+}
+
+
+/* main-header navbar navbar-expand navbar-light border-bottom bord */
+
+.brand-text{
+  color:rgb(247, 247, 247);
+}
+
+
+
+
+
+
+

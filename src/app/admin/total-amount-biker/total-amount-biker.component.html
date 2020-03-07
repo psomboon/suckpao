@@ -1,0 +1,37 @@
+<app-menu-admin>
+    <div align="center">
+      <mat-card class="card">
+        <br />
+        <h2>รายชื่อ Biker</h2>
+        <br />
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">ลำดับ</th>
+              <th scope="col">ชื่อ</th>
+              <th scope="col">นามสกุล</th>
+              <th scope="col">เลขบัตรประชาชน</th>
+              <th scope="col">เบอร์โทรศัพท์</th>
+              <th scope="col">ที่อยู่</th>
+              <th scope="col">ตรวจสอบรายได้</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let biker of bikers; let i = index">
+              <th>{{ i + 1 }}</th>
+              <td>{{ biker.fname }}</td>
+              <td>{{ biker.lname }}</td>
+              <td>{{ biker.personid }}</td>
+              <td>{{ biker.phone }}</td>
+              <td>{{ biker.address }}</td>
+              <td>
+                <button mat-raised-button color="warn" (click)="
+                openDialog(biker.key)">Click</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </mat-card>
+    </div>
+  </app-menu-admin>
+  

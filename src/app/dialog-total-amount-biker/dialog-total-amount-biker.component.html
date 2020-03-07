@@ -1,0 +1,32 @@
+<div align="center">
+    <mat-card class="card" style="width: 500px;">
+      <br />
+      <h2>{{ data.namestore }}</h2>
+      <p style="float: left;">วันที่ {{ currentDate }}</p>
+      <br />
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">เดือน</th>
+            <th scope="col">จำนวน order</th>
+            <th scope="col">รายได้</th>
+            <th scope="col">มูลค่า order</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let income of bikerIncomes">
+            <td>{{ getMonthAndYear(income.date) }}</td>
+            <td>{{ income.amountorder }}</td>
+            <td>{{ income.income }}</td>
+            <td>{{ income.totalmoney }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div align="center">
+        <button mat-raised-button color="primary" (click)="summary()">
+          สรุปยอดสำหรับเดือนนี้
+        </button>
+      </div>
+    </mat-card>
+  </div>
+  

@@ -1,0 +1,32 @@
+<app-menu-admin>
+  <div align="center">
+    <mat-card class="card">
+      <br />
+      <h2>รายชื่อร้านซักรีด</h2>
+      <br />
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ลำดับ</th>
+            <th scope="col">ชื่อร้านซักรีด</th>
+            <th scope="col">ที่อยู่ร้าน</th>
+            <th scope="col">เบอร์โทรศัพท์</th>
+            <th scope="col">รายได้ร้านค้า</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let income of incomes; let i = index">
+            <th>{{ i + 1 }}</th>
+            <td>{{ income.namestore }}</td>
+            <td>{{ income.address }}</td>
+            <td>{{ income.phone }}</td>
+            <td>
+              <button mat-raised-button color="warn" (click)="
+              openDialog(income.key, income.namestore)">Click</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </mat-card>
+  </div>
+</app-menu-admin>

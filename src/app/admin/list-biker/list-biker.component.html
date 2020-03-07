@@ -1,0 +1,61 @@
+<app-menu-admin>
+  <div align="center">
+    <mat-card class="card" style="width:80%">
+      <br />
+      <br />
+      <h2>รายชื่อ Biker</h2>
+      <table class="table">
+        <tr>
+          <td>ชื่อ</td>
+          <td>นามสกุล</td>
+          <td>เบอร์โทรศัพท์</td>
+          <td>อีเมลล์</td>
+          <td>รหัสผ่าน</td>
+          <td>ลบ</td>
+          <td>รายละเอียด & แก้ไข</td>
+        </tr>
+        <tr *ngFor="let item of itemArray">
+          <td>{{ item.fname }}</td>
+          <td>{{ item.lname }}</td>
+          <td>{{ item.phone }}</td>
+          <td>{{ item.emails }}</td>
+          <td>{{ item.password }}</td>
+          <td>
+            <button
+              mat-raised-button
+              color="warn"
+              (click)="onDelete(item.$key)"
+            >
+              ลบ
+            </button>
+            &nbsp;&nbsp;
+          </td>
+
+          <td>
+            <button
+              mat-raised-button
+              color="warn"
+              (click)="
+                openDialog(
+                  item.$key,
+                  item.fname,
+                  item.lname,
+                  item.personid,
+                  item.birthday,
+                  item.address,
+                  item.phone,
+                  item.email,
+                  item.emails,
+                  item.password,
+                  item.profileUrl
+                )
+              "
+            >
+              รายละเอียด & แก้ไข
+            </button>
+          </td>
+        </tr>
+      </table>
+    </mat-card>
+  </div>
+</app-menu-admin>
